@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_users
+    description: Information about each users registered at greenery's web page 
+    columns:
+      - name: user_firstname
+        tests:
+          - not_null
+
+  - name: stg_promos
+    description: Demogr
+    columns:  
+      - name: percentage_discount
+        tests:
+          - positive_values
+          
+  - name: stg_products
+    description: Demogra
+
+  - name: stg_orders
+    description: Demograp
+
+  - name: stg_order_items
+    description: Demograph
+
+  - name: stg_events
+    description: Demographi 
+
+  - name: stg_addresses
+    description: Demographic  

@@ -1,0 +1,42 @@
+version: 2
+
+sources:
+
+  - name: plants # name of the source 
+    schema: public # this is the schema our raw data lives in
+    database: dbt # this is the name of our database
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: users
+        loaded_at_field: created_at
+        description: >
+          Contains personal information from each user, such as their emails, telephone nums, etc. 
+      - name: orders
+        loaded_at_field: created_at
+        description: >
+          Contains data about each order that has been created 
+      - name: events
+        loaded_at_field: created_at
+        description: >
+          Contains details of the orders from greenery's web page such as the time of and order was created
+      - name: addresses
+        description: >
+          Contains the address of each order created (where the product should arrive)
+      - name: promos
+        description: >
+          Contains greenery's promo codes and tell us whether they are active or not 
+      - name: products
+        description: >
+          Contains products information such as id, name and price of the products (plants)
+      - name: order_items
+        description: >
+          Provides information about which and how many products are contained in each order 
