@@ -9,23 +9,23 @@ models:
           - not_null
 
   - name: stg_promos
-    description: Demogr
+    description: Contains greenery's promo codes and tell us whether they are active or not 
     columns:  
       - name: percentage_discount
         tests:
           - positive_values
           
   - name: stg_products
-    description: Demogra
+    description: Contains products information such as id, name and price of the products (plants)
 
   - name: stg_orders
-    description: Demograp
+    description: Contains data about each order that has been created 
 
   - name: stg_order_items
-    description: Demograph
+    description: Provides information about which and how many products are contained in each order 
 
   - name: stg_events
-    description: Demographi 
+    description: Contains details of the orders from greenery's web page such as the time of and order was created 
 
   - name: stg_addresses
-    description: Demographic  
+    description: Contains the address of each order created (where the product should arrive)  
