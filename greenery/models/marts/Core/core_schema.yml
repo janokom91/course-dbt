@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: Contains all about users dimension.
+
+  - name: dim_users
+    description: Contains all about users dimension.
+          
+  - name: fact_orders
+    description: facts about the orders.
+

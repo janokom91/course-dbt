@@ -17,15 +17,36 @@ models:
           
   - name: stg_products
     description: Contains products information such as id, name and price of the products (plants)
+    columns:
+      - name: product_id
+        tests:
+          - not_null
 
   - name: stg_orders
-    description: Contains data about each order that has been created 
-
+    description: Contains data about each order that has been created
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          
   - name: stg_order_items
     description: Provides information about which and how many products are contained in each order 
-
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+            
   - name: stg_events
     description: Contains details of the orders from greenery's web page such as the time of and order was created 
-
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          
   - name: stg_addresses
     description: Contains the address of each order created (where the product should arrive)  
+    columns:
+      - name: address_id
+        tests:
+          - not_null
+          
