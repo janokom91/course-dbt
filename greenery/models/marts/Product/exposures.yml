@@ -1,0 +1,12 @@
+version: 2
+
+exposures:
+- name: Product Funnel Dashboard
+  description: models that are critical to our product funnel dashboard
+  type: dashboard
+  maturity: low
+  owner:
+    name: Alejandro Ortiz
+    email: Aortiz@plants.com
+  depends_on:
+    - ref('fact_products')
