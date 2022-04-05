@@ -1,7 +1,2 @@
-version: 2
-
-models:
   - name: fact_user_orders
     description: Contains detail of the orders placed by the users
-  - name: prod_funnel
-    description: Contains detail of the funnel
